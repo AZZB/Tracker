@@ -4,17 +4,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/main_layout">
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Latitude: "
         android:id="@+id/Label_Latitude"
-        android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,20 +22,19 @@
         android:text="value"
         android:id="@+id/txtLatitudeValue"
         android:textSize="20sp"
-        android:layout_below="@+id/Label_Latitude"
-        android:layout_alignLeft="@+id/Label_Latitude"
-        android:layout_alignStart="@+id/Label_Latitude" />
+        android:layout_above="@+id/txtLongitudeValue"
+        android:layout_alignLeft="@+id/txtLongitudeValue"
+        android:layout_alignStart="@+id/txtLongitudeValue" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Longitude"
+        android:text="Longitude: "
         android:id="@+id/Label_Longitude"
-        android:textSize="21sp"
-        android:layout_below="@+id/txtLatitudeValue"
+        android:textSize="20sp"
+        android:layout_below="@+id/Label_Latitude"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,6 +42,15 @@
         android:text="value"
         android:id="@+id/txtLongitudeValue"
         android:textSize="20sp"
+        android:layout_alignTop="@+id/Label_Longitude"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time :"
+        android:id="@+id/Label_Time"
+        android:textSize="22dp"
         android:layout_below="@+id/Label_Longitude"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -50,31 +58,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time: "
-        android:id="@+id/Label_Time"
-        android:layout_below="@+id/txtLongitudeValue"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="51dp"
-        android:textSize="22sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="value"
         android:id="@+id/TimeValue"
-        android:layout_below="@+id/Label_Time"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="21sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Imei: "
-        android:id="@+id/LabelImei"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/TimeValue"
+        android:layout_alignBottom="@+id/Label_Time"
         android:layout_alignRight="@+id/txtLongitudeValue"
         android:layout_alignEnd="@+id/txtLongitudeValue"
         android:textSize="21sp" />
@@ -82,36 +68,39 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Imie :"
+        android:id="@+id/LabelImei"
+        android:textSize="21sp"
+        android:layout_below="@+id/Label_Time"
+        android:layout_alignRight="@+id/Label_Time"
+        android:layout_alignEnd="@+id/Label_Time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Value"
         android:id="@+id/ImeiValue"
-        android:layout_below="@+id/LabelImei"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/LabelImei"
+        android:layout_centerHorizontal="true"
         android:textSize="21sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="start"
-        android:id="@+id/btn_start"
-        android:layout_below="@+id/ImeiValue"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="207dp"
-        android:layout_marginEnd="207dp"
-        android:layout_marginTop="39dp"
+        android:id="@+id/button2"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/Label_Longitude"
+        android:layout_alignEnd="@+id/Label_Longitude"
         android:onClick="startBtnClick" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="stop"
-        android:id="@+id/button"
-        android:layout_alignTop="@+id/btn_start"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="43dp"
-        android:layout_marginEnd="43dp"
+        android:id="@+id/button3"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/ImeiValue"
+        android:layout_alignStart="@+id/ImeiValue"
         android:onClick="stopBtnClick" />
-
 </RelativeLayout>
